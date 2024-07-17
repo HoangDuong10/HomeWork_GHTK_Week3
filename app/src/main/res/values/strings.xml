@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">profile</string>
+    <string name="account">Tài khoản</string>
+    <string name="setting">Cài đặt</string>
+    <string name="employe_profile">Hồ sơ nhân viên</string>
+    <string name="wallet_GHTK">Ví GHTKPay</string>
+    <string name="load_data">Nạp Data</string>
+    <string name="prepaid_data">Di động trả trước</string>
+    <string name="insurance">Bảo hiểm PVI</string>
+    <string name="electric_bill">Hóa đơn điện</string>
+</resources>
