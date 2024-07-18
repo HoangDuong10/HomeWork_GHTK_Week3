@@ -20,7 +20,7 @@ class TriangleViewModel : ViewModel() {
             message.value = if (isPointInTriangle(px, py, x1, y1, x2, y2, x3, y3)) {
                 "Điểm vừa chọn nằm trong tam giác"
             } else {
-                "Điểm vừa chọn nằm ngoài trong tam giác"
+                "Điểm vừa chọn nằm ngoài tam giác"
             }
         }
     }
