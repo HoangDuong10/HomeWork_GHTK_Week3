@@ -92,19 +92,15 @@ fun ProfileScreen(){
     val viewModel: ProfileViewModel = viewModel(factory = ProfileViewModelProviderFactory(profileRepository))
 
     LaunchedEffect(Unit) {
-        println("LaunchedEffect: Calling getProfile()")
         viewModel.getProfile()
     }
-    val profile by viewModel.profile.observeAsState()
-    println("Profile state: $profile")
+    val profile by viewModel.profile
     when (profile) {
         is Resource.Loading -> {
-            println("Profile is Loading")
             LoadingBar()
         }
         is Resource.Success -> {
             val mProfile = (profile as Resource.Success).data
-            println("Profile is Success with data: $mProfile")
             Column {
                 if (mProfile != null) {
                     Header(mProfile)
@@ -116,11 +112,10 @@ fun ProfileScreen(){
         }
         is Resource.Error -> {
             val message = (profile as Resource.Error).message
-            println("Profile is Error with message: $message")
             Text(text = "Error: $message")
         }
 
-        else -> {println("Profile state is unknown")}
+        else -> {}
     }
 
 
